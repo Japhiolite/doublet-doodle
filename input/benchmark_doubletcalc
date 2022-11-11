@@ -1,0 +1,124 @@
+!==========>>>>> INFO
+# Title
+doubletcalc_benchmark
+
+# linfo
+1 1 1 1
+
+# runmode
+1
+    
+# file output: vtk hdf
+
+# active temp head
+
+# PROPS=bas
+
+# USER=none
+
+
+# grid
+200 200 1
+
+# delx
+200*75.0
+
+# dely
+200*75.0
+
+# delz
+1*25.0
+
+!==========>>>>> TIME STEP
+# timestep control
+1
+1.0 1.0 1.0 0.0
+
+# tunit
+31557600
+
+# time periods, records=1
+0.0 35.0 140 lin 
+
+!==========>>>>> TIME OUTPUT
+# output times, records=16
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+28
+30
+32
+
+!# borehole logs, records=0
+
+!==========>>>>> NONLINEAR SOLVER
+# nlsolve
+50 0
+
+!==========>>>>> FLOW
+# lsolvef (linear solver control)
+1.d-8 64 500
+# nliterf (nonlinear iteration control)
+1.0d-6 1.0
+
+!==========>>>>> TEMPERATURE
+# lsolvet (linear solver control)
+1.d-4 64 500
+# nlitert (nonlinear iteration control)
+1.0d-2 1.0
+
+!==========>>>>> INITIAL VALUES
+# temp init 
+40000*65
+
+# head init 
+1500
+
+!==========>>>>> UNIT DESCRIPTION
+!!
+# units
+0.14   1.d0  1.d0  3.81e-13	 1.e-10  1.d0  1.d0  2.9	0.  2077074.  10  2e-3	!fault_units 
+
+# uindex
+40000*1
+
+!==========>>>>>   define boundary properties
+# head bcw, records=2, direction=0
+106 100 1 -0.0556 0
+94 100 1 0.0556 0
+# temp bcd, records=1, direction=0
+94 100 1 30. 0
+
+# head bcn, simple=left, error=ignore
+75*-0.0556
+# temp bcd, simple=left, error=ignore, value=init
+!
+# head bcn, simple=right, error=ignore
+75*0.0556
+# temp bcd, simple=right, error=ignore, value=init
+
+!==========>>>>> MONITOR POINTS
+# monitor, records=13
+94 100 1 1
+95 100 1 1
+96 100 1 1
+97 100 1 1
+98 100 1 1
+99 100 1 1
+100 100 1 1
+101 100 1 1
+102 100 1 1
+103 100 1 1
+104 100 1 1
+105 100 1 1
+106 100 1 1
