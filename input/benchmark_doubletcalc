@@ -82,7 +82,7 @@ doubletcalc_benchmark
 40000*65
 
 # head init 
-1500
+40000*1500
 
 !==========>>>>> UNIT DESCRIPTION
 !!
@@ -96,16 +96,17 @@ doubletcalc_benchmark
 # head bcw, records=2, direction=0
 106 100 1 -0.0556 0
 94 100 1 0.0556 0
-# temp bcd, records=1, direction=0
+# temp bcd, records=1
 94 100 1 30. 0
 
-# head bcn, simple=left, error=ignore
-75*-0.0556
-# temp bcd, simple=left, error=ignore, value=init
+!# head bcn, simple=left, error=ignore
+!200*-0.0556
+!# temp bcd, simple=left, error=ignore, value=init
 !
-# head bcn, simple=right, error=ignore
-75*0.0556
-# temp bcd, simple=right, error=ignore, value=init
+!# head bcn, simple=right, error=ignore
+!200*0.0556
+!
+!# temp bcd, simple=right, error=ignore, value=init
 
 !==========>>>>> MONITOR POINTS
 # monitor, records=13
